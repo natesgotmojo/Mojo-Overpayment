@@ -108,7 +108,7 @@ export const StepperInput: React.FC<StepperInputProps> = ({
             value={displayValue}
             onChange={handleInputChange}
             onBlur={handleBlur}
-            className="w-full h-full bg-transparent border-0 text-base sm:text-lg font-semibold text-dark-text text-center focus:ring-0 px-8 sm:px-12 truncate"
+            className="w-full h-full bg-transparent border-0 text-base sm:text-lg font-semibold text-dark-text text-center focus:ring-0 px-8 sm:px-12 placeholder:text-slate-400"
             aria-label={label}
           />
           {suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none text-sm sm:text-base">{suffix}</span>}

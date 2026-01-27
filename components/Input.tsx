@@ -39,14 +39,14 @@ export const Input: React.FC<InputProps> = ({ label, value, onChange, name, ...p
       </label>
       <div className="relative border-b border-slate-300 focus-within:border-mojo-blue transition duration-150">
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
-          <span className="text-dark-text text-lg">£</span>
+          <span className="text-dark-text text-base sm:text-lg font-semibold">£</span>
         </div>
         <input
           type="text"
           inputMode="numeric"
           id={name}
           name={name}
-          className="block w-full bg-transparent border-0 py-2 px-5 text-dark-text text-lg text-center focus:ring-0"
+          className="block w-full bg-transparent border-0 py-3 px-8 text-dark-text text-base sm:text-lg font-semibold text-center focus:ring-0 placeholder:text-slate-400"
           value={formattedValue}
           onChange={handleInputChange}
           placeholder="250,000"
