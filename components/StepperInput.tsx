@@ -94,29 +94,29 @@ export const StepperInput: React.FC<StepperInputProps> = ({
         <button
           type="button"
           onClick={() => handleStep('decrement')}
-          className="px-6 h-full bg-stepper-minus text-white hover:bg-opacity-90 transition-colors duration-150 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-12 sm:w-auto px-0 sm:px-6 h-full bg-stepper-minus text-white hover:bg-opacity-90 transition-colors duration-150 flex items-center justify-center flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label={`Decrease ${label}`}
           disabled={value <= min}
         >
           <MinusIcon />
         </button>
-        <div className="relative flex-grow h-full">
-          {prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none">{prefix}</span>}
+        <div className="relative flex-grow h-full min-w-0">
+          {prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none text-sm sm:text-base">{prefix}</span>}
           <input
             type="text"
             inputMode={precision > 0 ? "decimal" : "numeric"}
             value={displayValue}
             onChange={handleInputChange}
             onBlur={handleBlur}
-            className="w-full h-full bg-transparent border-0 text-lg font-semibold text-dark-text text-center focus:ring-0 px-12"
+            className="w-full h-full bg-transparent border-0 text-base sm:text-lg font-semibold text-dark-text text-center focus:ring-0 px-8 sm:px-12 truncate"
             aria-label={label}
           />
-          {suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none">{suffix}</span>}
+          {suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none text-sm sm:text-base">{suffix}</span>}
         </div>
         <button
           type="button"
           onClick={() => handleStep('increment')}
-          className="px-6 h-full bg-stepper-plus text-white hover:bg-opacity-90 transition-colors duration-150 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-12 sm:w-auto px-0 sm:px-6 h-full bg-stepper-plus text-white hover:bg-opacity-90 transition-colors duration-150 flex items-center justify-center flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label={`Increase ${label}`}
           disabled={value >= max}
         >

@@ -20,15 +20,15 @@ export const CalculatorForm: React.FC<CalculatorFormProps> = ({ inputs, setInput
   };
 
   return (
-    <div className="p-8 md:p-12 lg:p-16 bg-white">
-      <div className="mb-10">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-dark-text tracking-tight">Mortgage Overpayment Calculator</h1>
-        <p className="text-slate-500 mt-3 text-lg">Work out how much you could save by paying extra.</p>
+    <div className="p-5 sm:p-8 md:p-12 lg:p-16 bg-white">
+      <div className="mb-6 md:mb-10">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-dark-text tracking-tight">Mortgage Overpayment Calculator</h1>
+        <p className="text-slate-500 mt-3 text-base md:text-lg">Work out how much you could save by paying extra.</p>
       </div>
 
-      <form className="space-y-8">
-          <h2 className="text-2xl font-bold text-dark-text">Your details</h2>
-          <div className="space-y-6">
+      <form className="space-y-6 md:space-y-8">
+          <h2 className="text-xl md:text-2xl font-bold text-dark-text">Your details</h2>
+          <div className="space-y-4 md:space-y-6">
             <Input
               label="Mortgage Amount"
               name="amount"
